@@ -61,7 +61,7 @@ Yarim kesilgan jamoalarni ham ko'rinib turgan qismi bilan yoz. Hech qanday izoh 
 
 # ---------------- SUPABASE (REST) ----------------
 async def db(method, table, params=None, body=None, upsert=None):
-    h = {"apikey": SB_KEY, "Authorization": f"Bearer {SB_KEY}", "Content-Type": "application/json"}
+    h = {"apikey": SB_KEY, "Content-Type": "application/json"}
     p = dict(params or {})
     if upsert:
         h["Prefer"] = "resolution=merge-duplicates,return=minimal"
